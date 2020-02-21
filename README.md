@@ -1,5 +1,5 @@
 # Classifiers training using fastai and inference using torchscript
-  This repository contains file for training classifiers in [fastai](https://www.fast.ai/) and inference using [TorchScript](https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html). Fastai is a great library, it provides a great APIs build on top of PyTorch like databunch and learner for creating dataloaders and training scheduler respectively. It uses lot's of state of the art methods for training and data creation like cyclic learning rates with one cyle policy, lot's of augmentations, etc. As we know that we python APIs of PyTorch and fastai and PyThon is slow as compared to other languagaes like C++. When we use our models in prduction, we need lesser inference time so there we can use C++. Recently, PyTorch introduced TorchScript, an intermediate representation of a PyTorch model (subclass of nn.Module) that can then be run in a high-performance environment of C++. This repository contains on of the best methods to training a classifier and inference in TorchScript.
+  This repository contain files for training classifiers using [fastai](https://www.fast.ai/) and inference using [TorchScript](https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html). Fastai is a great library, it provides a great APIs build on top of PyTorch like databunch and learner for creating dataloaders and training scheduler respectively. It uses lot's of state of the art methods for training and data creation like cyclic learning rates with [One Cycle Policy](https://sgugger.github.io/the-1cycle-policy.html), lot's of augmentations, etc. As we know, Python is slow as compared to other languages like C++, Java, etc. When we use our models in production, we need lesser inference time so, there using Python is not a very good idea, so we can use C++. Recently, PyTorch introduced TorchScript, an intermediate representation of a PyTorch model (subclass of nn.Module) that can then be run in a high-performance environment of C++. This repository contains on of the best methods to training a classifier and inference in TorchScript.
   
   It contains several files and notebooks which can be used for specific purposes:-                                           
   1. `notebooks/classifier.ipynb` - This is a very well commented notebook for training a classifier in fastai.
@@ -20,7 +20,7 @@
 ## Intsructions for using the code
   For using this project you need to follow some steps:
   
-   1. First clone this repo in your system and then navigate to repository folder
+   1. First clone this repository in your system and then navigate to repository folder
     
       ``` 
       git clone https://github.com/adityak2920/Traning-and-Inference.git
@@ -31,7 +31,7 @@
       ```
       mkdir build && cd build
       ```
-   3. Before procedding further we need to download latest distribution of libtorch to build our application which you can download from [here](https://pytorch.org/). After downloading unzip the folder and your directory should looks like this:
+   3. Before procedding further we need to download latest distribution of libtorch to build our application which you can download from [here](https://pytorch.org/). After downloading, unzip the folder and your libtorch directory should looks like this:
    
       ```
       libtorch/
@@ -48,7 +48,7 @@
       cmake --build . --config Release
       ```
       
-   5. Now you cab run your app with(in you can specify name of app in cmake file)
+   5. Now you can run your app with(you can specify name of app in cmake file)
       ```
         ./your_app
       ```
