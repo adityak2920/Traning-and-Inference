@@ -16,36 +16,44 @@
       torchvision >= 0.4
       fastai >= 1.0
 ```
+
+## Intsructions for using the code
   For using this project you need to follow some steps:
-    1. First clone this repo in your system and then navigate to repository folder
+  
+   1. First clone this repo in your system and then navigate to repository folder
+    
       ``` 
       git clone https://github.com/adityak2920/Traning-and-Inference.git
       cd Traning-and-Inference
-      ```
-    2. Create a folder build 
+      ``` 
+   2. Create a folder build 
+    
       ```
       mkdir build && cd build
       ```
-    3. Before procedding further we need to download latest distribution of libtorch to build our application which you can download from [here](https://pytorch.org/). After downloading unzip the folder and your directory should looks like this:
-    ```
-    libtorch/
-            bin/
-            include/
-            lib/
-            share/
-            build-hash
-            build-version
-    ```
-    4. Now run these commands to build the application
+   3. Before procedding further we need to download latest distribution of libtorch to build our application which you can download from [here](https://pytorch.org/). After downloading unzip the folder and your directory should looks like this:
+   
+      ```
+      libtorch/
+              bin/
+              include/
+              lib/
+              share/
+              build-hash
+              build-version
+      ```
+   4. Now run these commands to build the application
       ```
       cmake -DCMAKE_PREFIX_PATH=/path/to/libtorch ..
       cmake --build . --config Release
       ```
-    5. Now you cab run your app with(in you can specify name of app in cmake file)
+      
+   5. Now you cab run your app with(in you can specify name of app in cmake file)
       ```
         ./your_app
       ```
-    6. From next time you can recompile and run your app using
+      
+   6. From next time you can recompile and run your app using
       ```
       make
       ./your_app
