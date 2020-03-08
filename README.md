@@ -62,7 +62,7 @@
       ```
       
    For further information regarding this you can learn from following sources:-                                               
-      1. [fastai coursev-3](https://course.fast.ai/)                                                                             
+      1. [fastai course v-3](https://course.fast.ai/)                                                                             
       2. [Intro to TorchScript](https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html)                       
       3. [Loading a TorchScript Model in C++](https://pytorch.org/tutorials/advanced/cpp_export.html)
    
